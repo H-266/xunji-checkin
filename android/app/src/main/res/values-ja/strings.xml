@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">循記チェックイン</string>
+    <string name="checkin_widget_label">循記-タスク</string>
+    <string name="heatmap_widget_label">循記-ヒートマップ</string>
+    <string name="mini_widget_label">循記-進捗</string>
+    <string name="widget_image_desc">循記のホーム画面カード</string>
+    <string name="reminder_group">定期チェックインのリマインダー</string>
+    <string name="reminder_channel">チェックイン通知</string>
+    <string name="reminder_channel_desc">ローカル通知のみ、通信なし</string>
+    <string name="reminder_title">チェックインの時間です：%1$s</string>
+    <string name="reminder_text">循記を開いて今日のチェックインを完了しましょう。</string>
+</resources>

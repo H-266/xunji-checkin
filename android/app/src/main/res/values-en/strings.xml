@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Xunji Check-in</string>
+    <string name="checkin_widget_label">Xunji-Tasks</string>
+    <string name="heatmap_widget_label">Xunji-Heatmap</string>
+    <string name="mini_widget_label">Xunji-Progress</string>
+    <string name="widget_image_desc">Xunji home-screen card</string>
+    <string name="reminder_group">Recurring check-in reminders</string>
+    <string name="reminder_channel">Check-in reminders</string>
+    <string name="reminder_channel_desc">Local reminders, fully offline</string>
+    <string name="reminder_title">Time to check in: %1$s</string>
+    <string name="reminder_text">Open Xunji and finish today&#8217;s check-in.</string>
+</resources>

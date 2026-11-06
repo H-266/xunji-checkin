@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 循记打卡品牌深蓝：图标、启动页、通知/窗口底色统一使用。 -->
+    <color name="brand_blue">#1F3A8A</color>
+    <color name="app_background_dark">#0B1220</color>
+    <color name="ic_launcher_background">#1F3A8A</color>
+</resources>

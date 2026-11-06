@@ -1,0 +1,57 @@
+name: Bug 报告
+description: 报告可复现的问题（请先脱敏，不要上传真实备份）
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请先确认使用的是最新 release，并尽量提供可复现步骤。
+  - type: input
+    id: device
+    attributes:
+      label: 设备与系统
+      placeholder: 例如 Xiaomi 2304FPN6DC / Android 16
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App 版本
+      placeholder: 例如 1.0.0 (versionCode 1)
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: 主题
+      options: [深色, 浅色, 跟随系统]
+  - type: dropdown
+    id: animation
+    attributes:
+      label: 系统“减少动画”
+      options: ["未开启", "已开启", "不确定"]
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: 1. 打开… 2. 点击… 3. 看到…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志/截图
+      description: 请勿上传包含真实任务内容的备份或截图。

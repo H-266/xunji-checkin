@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">循记打卡</string>
+    <string name="checkin_widget_label">循记打卡-任务</string>
+    <string name="heatmap_widget_label">循记打卡-热力</string>
+    <string name="mini_widget_label">循记打卡-进度</string>
+    <string name="widget_image_desc">循记打卡桌面卡片</string>
+    <string name="reminder_group">循环打卡提醒</string>
+    <string name="reminder_channel">打卡提醒</string>
+    <string name="reminder_channel_desc">本地任务提醒，不联网</string>
+    <string name="reminder_title">该打卡了：%1$s</string>
+    <string name="reminder_text">打开循记，完成今天的打卡。</string>
+</resources>

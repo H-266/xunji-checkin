@@ -1,0 +1,55 @@
+    final imported = RegExp(
+      r'^导入完成：任务 (\d+) · 打卡 (\d+) · 标签 (\d+)$',
+    ).firstMatch(zh);
+    if (imported != null) {
+      final t = imported[1]!, c = imported[2]!, g = imported[3]!;
+      return _pick(
+        'Import complete: $t tasks · $c check-ins · $g tags',
+        'インポート完了: タスク $t · チェック $c · タグ $g',
+        'Import terminé : $t tâches · $c pointages · $g tags',
+        'Importación completa: $t tareas · $c registros · $g etiquetas',
+      );
+    }
+
+    final compared = RegExp(r'^较上期 ([+-]?\d+)(%?)$').firstMatch(zh);
+    if (compared != null) {
+      final value = '${compared[1]}${compared[2]}';
+      return _pick(
+        'vs previous $value',
+        '前期比 $value',
+        'vs période précédente $value',
+        'vs periodo anterior $value',
+      );
+    }
+
+    final weekdayDone = RegExp(r'^(.+) · 完成 (\d+)/(\d+)$').firstMatch(zh);
+    if (weekdayDone != null) {
+      final w = weekdayDone[1]!, a = weekdayDone[2]!, b = weekdayDone[3]!;
+      return _pick(
+        '$w · $a/$b done',
+        '$w · $a/$b 完了',
+        '$w · $a/$b terminés',
+        '$w · $a/$b completados',
+      );
+    }
+
+    final weekdayMotto = RegExp(r'^(.+) · 把今天过好$').firstMatch(zh);
+    if (weekdayMotto != null) {
+      return _pick(
+        '${weekdayMotto[1]} · Make today count',
+        '${weekdayMotto[1]} · 今日を大切に',
+        '${weekdayMotto[1]} · Profite de la journée',
+        '${weekdayMotto[1]} · Aprovecha el día',
+      );
+    }
+
+    final dayAverage = RegExp(r'^(\d+) 天 · 均 (\d+)%$').firstMatch(zh);
+    if (dayAverage != null) {
+      final d = dayAverage[1]!, p = dayAverage[2]!;
+      return _pick(
+        '$d days · avg $p%',
+        '$d 日 · 平均 $p%',
+        '$d jours · moy. $p %',
+        '$d días · prom. $p %',
+      );
+    }

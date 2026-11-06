@@ -1,0 +1,147 @@
+    final backup = RegExp(r'^已备份 (.+)$').firstMatch(zh);
+    if (backup != null) {
+      return _pick(
+        'Backup saved: ${backup[1]}',
+        '保存しました: ${backup[1]}',
+        'Sauvegarde : ${backup[1]}',
+        'Copia guardada: ${backup[1]}',
+      );
+    }
+
+    final perfect = RegExp(r'^连续全勤 (\d+) 天$').firstMatch(zh);
+    if (perfect != null) {
+      final n = perfect[1]!;
+      return _pick(
+        'Perfect streak: $n days',
+        '連続全勤 $n 日',
+        'Série parfaite : $n jours',
+        'Racha perfecta: $n días',
+      );
+    }
+
+    final week = RegExp(r'^本周 (\d+)/(\d+) 次$').firstMatch(zh);
+    if (week != null) {
+      final a = week[1]!, b = week[2]!;
+      return _pick(
+        'This week: $a/$b',
+        '今週 $a/$b 回',
+        'Cette semaine : $a/$b',
+        'Esta semana: $a/$b',
+      );
+    }
+
+    final todayDone = RegExp(r'^今日打卡\s+(\d+)/(\d+)$').firstMatch(zh);
+    if (todayDone != null) {
+      final a = todayDone[1]!, b = todayDone[2]!;
+      return _pick(
+        'Today: $a/$b',
+        '今日のチェックイン: $a/$b',
+        "Aujourd'hui : $a/$b",
+        'Hoy: $a/$b',
+      );
+    }
+
+    final itemsDone = RegExp(r'^(\d+)/(\d+) 项完成$').firstMatch(zh);
+    if (itemsDone != null) {
+      final a = itemsDone[1]!, b = itemsDone[2]!;
+      return _pick(
+        '$a/$b done',
+        '$a/$b 完了',
+        '$a/$b terminés',
+        '$a/$b completados',
+      );
+    }
+
+    final items = RegExp(r'^(\d+)/(\d+) 项$').firstMatch(zh);
+    if (items != null) {
+      final a = items[1]!, b = items[2]!;
+      return _pick('$a/$b items', '$a/$b 件', '$a/$b éléments', '$a/$b elementos');
+    }
+
+    final avg8 = RegExp(r'^近 8 周平均 (\d+)%$').firstMatch(zh);
+    if (avg8 != null) {
+      final n = avg8[1]!;
+      return _pick(
+        '8-week average: $n%',
+        '直近8週平均: $n%',
+        'Moyenne 8 semaines : $n %',
+        'Promedio 8 semanas: $n %',
+      );
+    }
+
+    final doneRate = RegExp(r'^完成 (\d+)/(\d+) · (\d+)%$').firstMatch(zh);
+    if (doneRate != null) {
+      final a = doneRate[1]!, b = doneRate[2]!, p = doneRate[3]!;
+      return _pick(
+        '$a/$b · $p%',
+        '$a/$b · $p%',
+        '$a/$b · $p %',
+        '$a/$b · $p %',
+      );
+    }
+
+    final note = RegExp(r'^备注[：:]\s*(.+)$').firstMatch(zh);
+    if (note != null) {
+      return _pick(
+        'Note: ${note[1]}',
+        'メモ: ${note[1]}',
+        'Note : ${note[1]}',
+        'Nota: ${note[1]}',
+      );
+    }
+
+    final upcoming = RegExp(r'^近期生效[：:]\s*(.+)$').firstMatch(zh);
+    if (upcoming != null) {
+      return _pick(
+        'Upcoming: ${upcoming[1]}',
+        '次回の適用日: ${upcoming[1]}',
+        'Prochaines dates : ${upcoming[1]}',
+        'Próximas fechas: ${upcoming[1]}',
+      );
+    }
+
+    final completedAt = RegExp(r'^完成于 (.+)$').firstMatch(zh);
+    if (completedAt != null) {
+      return _pick(
+        'Completed at ${completedAt[1]}',
+        '完了日時: ${completedAt[1]}',
+        'Terminé à ${completedAt[1]}',
+        'Completado el ${completedAt[1]}',
+      );
+    }
+
+    final totalAvg = RegExp(r'^累计 (\d+) 天 · 均 (\d+)%$').firstMatch(zh);
+    if (totalAvg != null) {
+      final n = totalAvg[1]!, p = totalAvg[2]!;
+      return _pick(
+        'Total $n days · avg $p%',
+        '累計 $n 日 · 平均 $p%',
+        'Total $n jours · moy. $p %',
+        'Total $n días · prom. $p %',
+      );
+    }
+
+    final found = RegExp(r'^发现 (\d+) 条可修复的数据问题').firstMatch(zh);
+    if (found != null) {
+      final n = found[1]!;
+      return _pick(
+        'Found $n repairable issues',
+        '修復可能な問題が $n 件あります',
+        '$n problèmes réparables détectés',
+        'Se encontraron $n problemas reparables',
+      );
+    }
+
+    final backupDate = RegExp(r'^备份日期[：:]\s*(.*)$').firstMatch(zh);
+    if (backupDate != null) {
+      return _pick(
+        'Backup date: ${backupDate[1]}',
+        'バックアップ日: ${backupDate[1]}',
+        'Date de sauvegarde : ${backupDate[1]}',
+        'Fecha de copia: ${backupDate[1]}',
+      );
+    }
+
+    if (zh == '中文原文') {
+      return _pick('Chinese original', '中国語原文', 'Original chinois', 'Original chino');
+    }

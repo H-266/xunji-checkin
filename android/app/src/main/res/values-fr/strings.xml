@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Suivi Xunji</string>
+    <string name="checkin_widget_label">Xunji-Tâches</string>
+    <string name="heatmap_widget_label">Xunji-Carte</string>
+    <string name="mini_widget_label">Xunji-Progrès</string>
+    <string name="widget_image_desc">Carte d&#8217;accueil Xunji</string>
+    <string name="reminder_group">Rappels de pointage</string>
+    <string name="reminder_channel">Rappels de pointage</string>
+    <string name="reminder_channel_desc">Rappels locaux, entièrement hors ligne</string>
+    <string name="reminder_title">C&#8217;est l&#8217;heure de pointer : %1$s</string>
+    <string name="reminder_text">Ouvrez Xunji et terminez le pointage du jour.</string>
+</resources>

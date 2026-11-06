@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Registro Xunji</string>
+    <string name="checkin_widget_label">Xunji-Tareas</string>
+    <string name="heatmap_widget_label">Xunji-Mapa</string>
+    <string name="mini_widget_label">Xunji-Progreso</string>
+    <string name="widget_image_desc">Tarjeta de inicio de Xunji</string>
+    <string name="reminder_group">Recordatorios de registro</string>
+    <string name="reminder_channel">Recordatorios</string>
+    <string name="reminder_channel_desc">Recordatorios locales, sin conexión</string>
+    <string name="reminder_title">Hora de registrar: %1$s</string>
+    <string name="reminder_text">Abre Xunji y completa el registro de hoy.</string>
+</resources>
